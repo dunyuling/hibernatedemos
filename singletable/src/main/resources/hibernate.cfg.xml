@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/hibernate_test?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai
+        </property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">mysql</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</property>
+
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- TODO 在表名前面添加的字段，有时没有效果，不清楚原因，暂不处理-->
+        <!--<property name="default_schema">hibernate_test</property>-->
+
+
+        <!--本地事务，jdbc事务-->
+        <property name="current_session_context_class">thread</property>
+
+        <!--全局事务，jta事务，需集成Jboss-->
+        <!--<property name="current_session_context_class">jta</property>-->
+
+        <mapping resource="Student.hbm.xml" />
+        <mapping resource="Teacher.hbm.xml" />
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

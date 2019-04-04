@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.rc.singletable.Student" table="student">
+        <id name="sid" column="sid" type="java.lang.String" >
+            <generator class="uuid"/>
+        </id>
+        <property name="sname" column="sname" type="java.lang.String"/>
+        <property name="gender" column="gender" type="java.lang.String"/>
+        <property name="birthday" column="birthday" type="java.util.Date"/>
+
+        <component name="address" class="com.rc.singletable.Address">
+            <property name="postcode" column="postcode" type="string"/>
+            <property name="phone" column="phone" type="string"/>
+            <property name="address" column="address" type="string"/>
+        </component>
+
+        <property name="picture" column="picture" type="blob" />
+        <property name="favor" column="favor" type="byte[]" />
+    </class>
+</hibernate-mapping>
