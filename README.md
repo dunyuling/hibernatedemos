@@ -10,4 +10,9 @@
 
 + hibernate
     * Hibernate是java领域内一款开源的ORM框架技术。Hibernate对JDBC进行了非常
-        轻量级的对象封装                    
+        轻量级的对象封装  
+    + 映射
+        * one to many
+        * many to one
+        * one to one
+        * many to many                      
