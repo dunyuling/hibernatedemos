@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.rc.hql.Seller" table="seller">
+        <id name="id" type="java.lang.Long">
+            <generator class="increment" />
+        </id>
+        <property name="name" column="name" type="java.lang.String"/>
+        <property name="tel" column="tel" type="java.lang.String"/>
+        <property name="address" column="address" type="java.lang.String"/>
+        <property name="website" column="website" type="java.lang.String"/>
+        <property name="star" column="star" type="java.lang.Integer"/>
+        <property name="business" column="business" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

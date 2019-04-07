@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.rc.hql.Order" table="orderform">
+        <id name="id" type="java.lang.Long">
+            <generator class="increment"/>
+        </id>
+
+        <many-to-one name="customer" class="com.rc.hql.Customer" column="customer" fetch="join"/>
+
+        <property name="tradeDate" column="tradedate" type="java.util.Date"/>
+        <property name="status" column="status" type="java.lang.String"/>
+        <property name="amount" column="amount" type="java.lang.Double"/>
+
+        <set name="orderItems" cascade="all" inverse="true" lazy="true">
+            <key column="orderid"/>
+            <one-to-many class="com.rc.hql.OrderItem"/>
+        </set>
+    </class>
+</hibernate-mapping>
