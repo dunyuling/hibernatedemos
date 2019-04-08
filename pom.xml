@@ -12,6 +12,7 @@
         <module>singletable</module>
         <module>m2oo2m</module>
         <module>hql</module>
+        <module>m2m</module>
     </modules>
 
     <properties>

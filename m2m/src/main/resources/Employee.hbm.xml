@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.rc.m2m.entity.Employee" table="employee">
+        <id name="empid" column="empid" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+        <property name="empname" type="java.lang.String">
+            <column name="empname" length="20" not-null="true"/>
+        </property>
+
+        <!--配置对多对关系-->
+        <set name="projects" table="proemp">
+            <key column="rempid"></key>
+            <many-to-many class="com.rc.m2m.entity.Project" column="rproid"/>
+        </set>
+    </class>
+</hibernate-mapping>
