@@ -13,11 +13,13 @@
         <module>m2oo2m</module>
         <module>hql</module>
         <module>m2m</module>
+        <module>cache</module>
     </modules>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <hibernate.version>5.4.2.Final</hibernate.version>
     </properties>
 
     <dependencies>
@@ -30,7 +32,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.4.2.Final</version>
+            <version>${hibernate.version}</version>
         </dependency>
 
         <dependency>
