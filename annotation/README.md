@@ -105,7 +105,7 @@
         * 注意：保存时应该先保存外键对象，再保存主表对象                                          
     + 一对一双向外键(对应package:com.rc.annotation.relation.oto_bfk)
         * 主控方配置同一对一单项外键关联 
-        * 被控方：@OneToOne(mappedBy="idCard")                    
+        * 被控方：@OneToOne(mappedBy="identificationCard")                    
         * 注意：双向关联，被空方必须设置mappedBy属性。因为双向关联只能交给一方去控制，
             不可能在双方都设置外键保存关联关系，否则双方都无法保存                     
     + 一对一单向外键联合主键关联 
@@ -122,5 +122,25 @@
             @JoinColumn(name="cid")                                           
     + 一对多(多对一)双向外键关联(对应package:com.rc.annotation.relation.otm_bfk)  
         * 结合上面'多对一单向外键关联'和'一对多单向外键关联'                                        
-    + 多对多单向外键关联                                           
-    + 多对多双向外键关联                                           
+    + 多对多单向外键关联(对应package:com.rc.annotation.relation.mtm_fk)   
+        * 其中一个多方持有另外一个多方的集合
+        * 创建中间表
+        * 配置
+            @ManyToMany
+            @JoinTable(
+                name="t_teacher_student",
+                joinColumns={@JoinColumn(name="sid")},
+                inverseJoinColumns={@JoinColumn(name="tid")}    
+            )                                             
+    + 多对多双向外键关联(对应package:com.rc.annotation.relation.mtm_bfk) 
+        + 配置
+            * 学生方
+                @ManyToMany
+                @JoinTable(
+                    name="t_teacher_student",
+                    joinColumns={@JoinColumn(name="sid")},
+                    inverseJoinColumns={@JoinColumn(name="tid")}    
+                )  
+            
+            * 老师方
+                @ManyToMany(mappedBy = "teachers")                                                                             

@@ -47,8 +47,17 @@
         <mapping class="com.rc.annotation.relation.otm_fk.ClassRoom"/>-->
 
         <!-- 一对多双向外键关联 -->
-        <mapping class="com.rc.annotation.relation.otm_bfk.Student"/>
-        <mapping class="com.rc.annotation.relation.otm_bfk.ClassRoom"/>
+        <!--<mapping class="com.rc.annotation.relation.otm_bfk.Student"/>
+        <mapping class="com.rc.annotation.relation.otm_bfk.ClassRoom"/>-->
+
+        <!-- 多对多单向外键关联 -->
+        <!--<mapping class="com.rc.annotation.relation.mtm_fk.Student"/>
+        <mapping class="com.rc.annotation.relation.mtm_fk.Teacher"/>-->
+
+        <!-- 多对多双向外键关联 -->
+        <mapping class="com.rc.annotation.relation.mtm_bfk.Student"/>
+        <mapping class="com.rc.annotation.relation.mtm_bfk.Teacher"/>
+
 
     </session-factory>
 </hibernate-configuration>
