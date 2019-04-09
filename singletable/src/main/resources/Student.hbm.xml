@@ -4,10 +4,10 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="com.rc.singletable.Student" table="student">
-        <id name="sid" column="sid" type="java.lang.String" >
+        <id name="pid" column="pid" type="java.lang.String" >
             <generator class="uuid"/>
         </id>
-        <property name="sname" column="sname" type="java.lang.String"/>
+        <property name="pname" column="pname" type="java.lang.String"/>
         <property name="gender" column="gender" type="java.lang.String"/>
         <property name="birthday" column="birthday" type="java.util.Date"/>
 

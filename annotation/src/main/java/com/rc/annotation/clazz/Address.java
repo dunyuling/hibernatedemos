@@ -1,30 +1,30 @@
-package com.rc.singletable;
+package com.rc.annotation.clazz;
+
+import javax.persistence.Embeddable;
 
 /**
  * @ClassName Address
- * @Description 地址类
+ * @Description 地址类，作为嵌入属性类使用
  * @Author liux
- * @Date 19-4-5 上午12:11
+ * @Date 19-4-9 上午10:32
  * @Version 1.0
  */
+@Embeddable
 public class Address {
 
-    private String postcode;
+    private String postcode;//邮编
 
-    private String phone;
+    private String address;//地址
 
-    private String address;
+    private String phone;//电话
 
     public Address() {
-        this.postcode = "100000";
-        this.phone = "13012345678";
-        this.address = "china";
     }
 
-    public Address(String postcode, String phone, String address) {
+    public Address(String postcode, String address, String phone) {
         this.postcode = postcode;
-        this.phone = phone;
         this.address = address;
+        this.phone = phone;
     }
 
     public String getPostcode() {
@@ -35,14 +35,6 @@ public class Address {
         this.postcode = postcode;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public String getAddress() {
         return address;
     }
@@ -51,12 +43,20 @@ public class Address {
         this.address = address;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     @Override
     public String toString() {
         return "Address{" +
                 "postcode='" + postcode + '\'' +
-                ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
                 '}';
     }
 }

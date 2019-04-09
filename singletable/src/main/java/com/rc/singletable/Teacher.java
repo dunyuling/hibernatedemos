@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * @ClassName Teacher
- * @Description TODO
+ * @Description 老师类
  * @Author liux
  * @Date 19-4-4 下午6:45
  * @Version 1.0

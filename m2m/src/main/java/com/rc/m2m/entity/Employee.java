@@ -5,7 +5,7 @@ import java.util.Set;
 
 /**
  * @ClassName Employee
- * @Description TODO
+ * @Description 雇员类
  * @Author liux
  * @Date 19-4-8 下午1:44
  * @Version 1.0

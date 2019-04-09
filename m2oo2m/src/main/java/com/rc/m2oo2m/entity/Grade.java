@@ -7,7 +7,7 @@ import java.util.Set;
 
 /**
  * @ClassName Grade
- * @Description TODO
+ * @Description 班级类
  * @Author liux
  * @Date 19-4-5 上午11:59
  * @Version 1.0

@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * @ClassName SellerTest
- * @Description TODO
+ * @Description 商家类测试
  * @Author liux
  * @Date 19-4-7 下午5:43
  * @Version 1.0

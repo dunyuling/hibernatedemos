@@ -5,12 +5,12 @@
 <hibernate-mapping>
 
     <class name="com.rc.m2oo2m.entity.Student" table="student" schema="hibernate_test2">
-        <id name="sid">
-            <column name="sid" sql-type="int(11)"/>
+        <id name="pid">
+            <column name="pid" sql-type="int(11)"/>
             <generator class="increment"/>
         </id>
-        <property name="sname">
-            <column name="sname" sql-type="varchar(20)" length="20"/>
+        <property name="pname">
+            <column name="pname" sql-type="varchar(20)" length="20"/>
         </property>
         <property name="ssex">
             <column name="ssex" sql-type="char(7)" length="7" not-null="true"/>

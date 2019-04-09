@@ -9,7 +9,7 @@ import org.junit.Before;
 
 /**
  * @ClassName BaseTest
- * @Description TODO
+ * @Description 测试基类
  * @Author liux
  * @Date 19-4-7 下午5:43
  * @Version 1.0

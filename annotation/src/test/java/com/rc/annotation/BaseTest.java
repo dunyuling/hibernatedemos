@@ -1,4 +1,4 @@
-package com.rc.m2m;
+package com.rc.annotation;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -11,22 +11,20 @@ import org.junit.Before;
  * @ClassName BaseTest
  * @Description 测试基类
  * @Author liux
- * @Date 19-4-8 下午2:02
+ * @Date 19-4-9 下午4:06
  * @Version 1.0
  */
 public class BaseTest {
 
-    SessionFactory sessionFactory;
+    protected SessionFactory sessionFactory;
     protected Session session;
     protected Transaction transaction;
+
 
     @Before
     public void init() {
         Configuration configuration = new Configuration().configure();
-        if (sessionFactory == null) {
-            sessionFactory = configuration.buildSessionFactory();
-        }
-        System.out.println("sessionFactory: " + sessionFactory.hashCode());
+        sessionFactory = configuration.buildSessionFactory();
         session = sessionFactory.getCurrentSession();
         transaction = session.beginTransaction();
     }
@@ -35,5 +33,6 @@ public class BaseTest {
     public void tearDown() {
         transaction.commit();
         session.close();
+        sessionFactory.close();
     }
 }

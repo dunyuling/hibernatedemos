@@ -5,7 +5,7 @@ import java.util.Objects;
 
 /**
  * @ClassName Student
- * @Description TODO
+ * @Description 学生类
  * @Author liux
  * @Date 19-4-5 上午11:59
  * @Version 1.0

@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @ClassName CommodityTest
- * @Description TODO
+ * @Description 货物类测试
  * @Author liux
  * @Date 19-4-7 下午6:44
  * @Version 1.0

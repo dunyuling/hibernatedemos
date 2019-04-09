@@ -5,8 +5,8 @@ create table grade(
 );
 
 create table student(
-    sid int primary key,
-    sname varchar(20) not null,
+    pid int primary key,
+    pname varchar(20) not null,
     ssex char(7),
     gid int
 );
