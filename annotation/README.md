@@ -85,7 +85,7 @@
     + @EmbeddedId
         * 使用嵌入式主键类实现复合主键
         * 注意：嵌入式主键类必须实现Serializable接口，有默认无参构造方法
-        * 示例见User.java和UserPk.java
+        * 示例见com.rc.annotation.clazz.User.java和com.rc.annotation.clazz.UserPk.java
     + @Lob
     + @Version
     + @Basic
@@ -108,9 +108,19 @@
         * 被控方：@OneToOne(mappedBy="idCard")                    
         * 注意：双向关联，被空方必须设置mappedBy属性。因为双向关联只能交给一方去控制，
             不可能在双方都设置外键保存关联关系，否则双方都无法保存                     
-    + 一对一单向外键联合主键关联                                           
-    + 多对一单向外键关联                                           
-    + 一对多单向外键关联                                           
-    + 一对多双向外键关联                                           
+    + 一对一单向外键联合主键关联 
+        * 见com.rc.annotation.clazz.User.java和com.rc.annotation.clazz.UserPk.java                                         
+    + 多对一单向外键关联(对应package:com.rc.annotation.relation.mto_fk)  
+        * 多方持有一方的引用
+        + 多方配置
+            @ManyToOne(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+            @JoinColumn(name="cid",referenceColumnName="CID")                                         
+    + 一对多单向外键关联(对应package:com.rc.annotation.relation.otm_fk) 
+        * 一方持有多方的集合
+        * 一方配置
+            @OneToMany(cascade=CasCadeType.ALL,fetch=FetchType.Lazy)
+            @JoinColumn(name="cid")                                           
+    + 一对多(多对一)双向外键关联(对应package:com.rc.annotation.relation.otm_bfk)  
+        * 结合上面'多对一单向外键关联'和'一对多单向外键关联'                                        
     + 多对多单向外键关联                                           
     + 多对多双向外键关联                                           

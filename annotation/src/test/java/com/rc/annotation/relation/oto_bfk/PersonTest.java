@@ -3,7 +3,6 @@ package com.rc.annotation.relation.oto_bfk;
 import com.rc.annotation.BaseTest;
 import org.junit.Test;
 
-import javax.persistence.Id;
 import java.util.Date;
 
 /**
