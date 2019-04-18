@@ -16,3 +16,6 @@
         * many to one
         * one to one
         * many to many                      
+        
+###创建mysql时的编码问题
+CREATE DATABASE IF NOT EXISTS yourdbname DEFAULT CHARSET utf8 COLLATE utf8_general_ci;        
